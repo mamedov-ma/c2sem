@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+int main()
+{
+    unsigned int a = 0;
+
+    scanf("%x", &a);
+
+    a >>= 4;
+
+    unsigned int b = 3;
+
+    switch(a & b)
+    {
+        case 0: printf("bn");
+        case 1: printf("rd, bw,bk");
+        case 2: printf("bw");
+        case 3: printf("");
+    }
+
+    return 0;
+}
+

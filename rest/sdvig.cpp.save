@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+void left(unsigned char a, char n, unsigned char m)
+{
+    m = 255;
+
+    m &= a;
+
+    m <<= 8 - n;
+
+    a >>= n;
+
+    a |= m;
+
+    printf ("%d", a);
+}
+
+
+
+
+int main()
+{
+    unsigned char a,m = 0;
+
+    char n = 0;
+
+    scanf ("%hhu %hhu", &a, &n);
+
+    left(a,n,m);
+
+}
